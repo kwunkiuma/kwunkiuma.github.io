@@ -1,0 +1,48 @@
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css?v=1" />
+    <script>
+        document.addEventListener('DOMContentLoaded', function (event) {
+            var coll = document.getElementsByClassName("collapsible");
+            var i;
+
+            for (i = 0; i < coll.length; i++) {
+                coll[i].addEventListener("click", function () {
+                    this.classList.toggle("active");
+                    var content = this.nextElementSibling;
+                    if (content.style.display === "block") {
+                        content.style.display = "none";
+                    } else {
+                        content.style.display = "block";
+                    }
+                });
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <div id="content">
+        <h1>
+            SoftJongMahWire
+        </h1>
+        <ul id="navigation-bar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="rules.html">Rules</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+        </ul>
+        <div class="heading">
+            FAQ
+        </div>
+
+        <button type="button" class="collapsible">Open Section 3</button>
+        <p class="collapsible-content" style="display: none">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+            ex ea commodo consequat.
+        </p>
+    </div>
+</body>
+
+</html>
